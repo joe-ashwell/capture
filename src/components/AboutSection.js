@@ -4,7 +4,7 @@ import home1 from "../img/home1.png";
 
 const AboutSection = () => {
   return (
-    <div>
+    <AboutDiv>
       <DescriptionDiv>
         <TitleDiv>
           <HideDiv>
@@ -27,13 +27,41 @@ const AboutSection = () => {
       <ImageDiv>
         <img src={home1} alt="man with camera" />
       </ImageDiv>
-    </div>
+    </AboutDiv>
   );
 };
 
-const DescriptionDiv = Styled.div``;
+const AboutDiv = Styled.div`
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+  color: white;
+`;
+
+const DescriptionDiv = Styled.div`
+  flex: 1;
+  padding-right: 5rem;
+  h2 {
+    font-weight: lighter;
+  }
+`;
+
 const TitleDiv = Styled.div``;
-const HideDiv = Styled.div``;
-const ImageDiv = Styled.div``;
+
+const HideDiv = Styled.div`
+  overflow: hidden;
+`;
+
+const ImageDiv = Styled.div`
+  flex: 1;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+`;
 
 export default AboutSection;
