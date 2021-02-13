@@ -1,6 +1,6 @@
 import React from "react";
 import AboutUs from "./pages/AboutUs";
-import GlobalStyle from "./components/GlobalStyles";
+import GlobalStyle from "./components/styles/GlobalStyles";
 
 function App() {
   return (

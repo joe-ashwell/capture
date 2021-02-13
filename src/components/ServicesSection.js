@@ -5,6 +5,12 @@ import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
+import {
+  AboutDiv,
+  DescriptionDiv,
+  HideDiv,
+  ImageDiv,
+} from "../components/styles/AboutPageStyles";
 
 const ServicesSection = () => {
   return (
@@ -51,11 +57,39 @@ const ServicesSection = () => {
   );
 };
 
-const ServicesDiv = Styled.div``;
-const DescriptionDiv = Styled.div``;
-const CardsDiv = Styled.div``;
-const CardDiv = Styled.div``;
-const IconDiv = Styled.div``;
-const ImageDiv = Styled.div``;
+// Extending the AboutDiv stylings
+const ServicesDiv = Styled(AboutDiv)`
+
+  h2 {
+    padding-bottom: 5rem;
+  }
+
+  p {
+    width: 70%;
+    padding: 2rem 0rem 4rem 0rem;
+  }
+`;
+
+const CardsDiv = Styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+`;
+
+const CardDiv = Styled.div`
+  /* flex-basis: 20rem; */
+`;
+
+const IconDiv = Styled.div`
+  display: flex;
+  align-items: center;
+
+  > h3 {
+    margin-left: 1rem;
+    background: white;
+    color: black;
+    padding: 1rem;
+  }
+`;
 
 export default ServicesSection;
