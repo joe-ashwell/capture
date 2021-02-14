@@ -77,7 +77,7 @@ const CardsDiv = Styled.div`
 `;
 
 const CardDiv = Styled.div`
-  /* flex-basis: 20rem; */
+  width: 50%;
 `;
 
 const IconDiv = Styled.div`

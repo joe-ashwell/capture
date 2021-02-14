@@ -5,11 +5,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'inter', sans-serif;
   }
 
   body {
     background-color: #1b1b1b;
+    font-family: 'inter', sans-serif;
   }
 
   button {
@@ -30,10 +30,12 @@ const GlobalStyle = createGlobalStyle`
   h2 {
     font-weight: lighter;
     font-size: 4rem;
+    font-family: 'inter', sans-serif;
   }
 
   h3 {
     color: white;
+    font-family: 'inter', sans-serif;
   }
 
   h4 {

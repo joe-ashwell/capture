@@ -81,7 +81,7 @@ const FAQLine = Styled.div`
 `;
 
 const QuestionDiv = Styled.div`
-  padding: 3rem;
+  padding: 3rem 0rem;
   cursor: pointer;
 `;
 
