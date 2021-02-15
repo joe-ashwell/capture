@@ -1,5 +1,4 @@
 import React from "react";
-import Styled from "styled-components";
 import {
   AboutDiv,
   DescriptionDiv,
@@ -8,6 +7,8 @@ import {
 } from "../components/styles/AboutPageStyles";
 import home1 from "../img/home1.png";
 import { motion } from "framer-motion";
+import { titleAnimation, fade, photoAnimation } from "../Animation";
+import Wave from "./Wave";
 
 const AboutSection = () => {
   return (
@@ -15,25 +16,30 @@ const AboutSection = () => {
       <DescriptionDiv>
         <motion.div>
           <HideDiv>
-            <motion.h2>We work to make</motion.h2>
+            <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
           </HideDiv>
           <HideDiv>
-            <motion.h2>
+            <motion.h2 variants={titleAnimation}>
               your <span>dreams</span>
             </motion.h2>
           </HideDiv>
           <HideDiv>
-            <motion.h2>come true.</motion.h2>
+            <motion.h2 variants={titleAnimation}>come true.</motion.h2>
           </HideDiv>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas that you have.
-        </p>
-        <button>Contact us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact us</motion.button>
       </DescriptionDiv>
       <ImageDiv>
-        <img src={home1} alt="man with camera" />
+        <motion.img
+          variants={photoAnimation}
+          src={home1}
+          alt="man with camera"
+        />
       </ImageDiv>
+      <Wave />
     </AboutDiv>
   );
 };

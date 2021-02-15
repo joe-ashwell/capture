@@ -1,6 +1,8 @@
 import React from "react";
 import Styled from "styled-components";
 import { AboutDiv } from "./styles/AboutPageStyles";
+import Toggle from "./Toggle";
+import { AnimateSharedLayout } from "framer-motion";
 
 const FAQSection = () => {
   return (
@@ -8,54 +10,56 @@ const FAQSection = () => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
+      {/* Animate shared layout is used to add animation to areas that are affected by change somewhere else, i.e. change the toggle, makes the p dissapear. It's a smooth affect. */}
+      <AnimateSharedLayout>
+        <Toggle title="How do I start?">
+          <QuestionDiv>
+            <AnswerDiv>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                voluptatibus.
+              </p>
+            </AnswerDiv>
+          </QuestionDiv>
+        </Toggle>
 
-      <QuestionDiv>
-        <h4>How do I start?</h4>
-        <AnswerDiv>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-            voluptatibus.
-          </p>
-        </AnswerDiv>
-        <FAQLine></FAQLine>
-      </QuestionDiv>
+        <Toggle title="Daily schedule?">
+          <QuestionDiv>
+            <AnswerDiv>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                voluptatibus.
+              </p>
+            </AnswerDiv>
+          </QuestionDiv>
+        </Toggle>
 
-      <QuestionDiv>
-        <h4>Daily schedule?</h4>
-        <AnswerDiv>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-            voluptatibus.
-          </p>
-        </AnswerDiv>
-        <FAQLine></FAQLine>
-      </QuestionDiv>
+        <Toggle title="Different payment options?">
+          <QuestionDiv>
+            <AnswerDiv>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                voluptatibus.
+              </p>
+            </AnswerDiv>
+          </QuestionDiv>
+        </Toggle>
 
-      <QuestionDiv>
-        <h4>Different payment options?</h4>
-        <AnswerDiv>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-            voluptatibus.
-          </p>
-        </AnswerDiv>
-        <FAQLine></FAQLine>
-      </QuestionDiv>
-
-      <QuestionDiv>
-        <h4>What products do you offer?</h4>
-        <AnswerDiv>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-            voluptatibus.
-          </p>
-        </AnswerDiv>
-        <FAQLine></FAQLine>
-      </QuestionDiv>
+        <Toggle title="What products do you offer?">
+          <QuestionDiv>
+            <AnswerDiv>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                voluptatibus.
+              </p>
+            </AnswerDiv>
+          </QuestionDiv>
+        </Toggle>
+      </AnimateSharedLayout>
     </FAQDiv>
   );
 };
@@ -71,13 +75,6 @@ const FAQDiv = Styled(AboutDiv)`
     padding-bottom: 2rem;
     font-weight: lighter;
   }
-`;
-
-const FAQLine = Styled.div`
-    background: #ccc;
-    height: 0.2rem;
-    margin: 2rem 0rem;
-    width: 100%;
 `;
 
 const QuestionDiv = Styled.div`
