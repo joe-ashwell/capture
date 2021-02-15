@@ -7,24 +7,25 @@ import {
   ImageDiv,
 } from "../components/styles/AboutPageStyles";
 import home1 from "../img/home1.png";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
     <AboutDiv>
       <DescriptionDiv>
-        <TitleDiv>
+        <motion.div>
           <HideDiv>
-            <h2>We work to make</h2>
+            <motion.h2>We work to make</motion.h2>
           </HideDiv>
           <HideDiv>
-            <h2>
+            <motion.h2>
               your <span>dreams</span>
-            </h2>
+            </motion.h2>
           </HideDiv>
           <HideDiv>
-            <h2>come true.</h2>
+            <motion.h2>come true.</motion.h2>
           </HideDiv>
-        </TitleDiv>
+        </motion.div>
         <p>
           Contact us for any photography or videography ideas that you have.
         </p>
@@ -36,7 +37,5 @@ const AboutSection = () => {
     </AboutDiv>
   );
 };
-
-const TitleDiv = Styled.div``;
 
 export default AboutSection;
