@@ -8,6 +8,7 @@ import MovieDetail from "./pages/MovieDetail";
 import { Switch, Route, useLocation } from "react-router-dom";
 // We need to import this, then wrap the app with this component so that framer motion knows when components are removed or added to the React tree.
 import { AnimatePresence } from "framer-motion";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
   const location = useLocation();
@@ -17,6 +18,8 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
+      <ScrollTop />
+
       {/* Exitbeforeenter is needed as otherwise the transitions occur at the same time and you cant see the one fading in. */}
       <AnimatePresence exitBeforeEnter>
         {/* Need to add the location as a prop and pass it in to switch so that Framer motion knows when the page has changed by looking at the key */}
