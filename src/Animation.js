@@ -112,3 +112,21 @@ export const sliderContainer = {
     },
   },
 };
+
+export const scrollReveal = {
+  hidden: {
+    opactiy: 0,
+    scale: 1.2,
+    transition: {
+      duration: 0.25,
+    },
+  },
+
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};

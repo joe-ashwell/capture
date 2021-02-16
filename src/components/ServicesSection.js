@@ -12,9 +12,20 @@ import {
   ImageDiv,
 } from "../components/styles/AboutPageStyles";
 
+import { scrollReveal } from "../Animation";
+import { useScroll } from "./UseScroll";
+
 const ServicesSection = () => {
+  // imports the returned values from the useScroll component.
+  const [element, controls] = useScroll();
+
   return (
-    <ServicesDiv>
+    <ServicesDiv
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <DescriptionDiv>
         <h2>
           High <span>quality</span> services

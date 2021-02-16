@@ -25,7 +25,6 @@ const OurWork = () => {
       exit="exit"
       style={{ background: "#fff" }}
     >
-      <h1>Our Work</h1>
       {/* This container div was used to stagger these items individually, as otherwise it's automatically controlled by the 'pageAnimation - staggerChildren' */}
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
@@ -33,6 +32,8 @@ const OurWork = () => {
         <Frame3 variants={slider}></Frame3>
         <Frame4 variants={slider}></Frame4>
       </motion.div>
+
+      <motion.h1 variants={fade}>Our Work</motion.h1>
 
       <MovieDiv>
         <motion.h2 variants={fade}>The Athlete</motion.h2>
@@ -75,7 +76,7 @@ const WorkDiv = Styled(motion.div)`
   }
 `;
 
-const MovieDiv = Styled.div`
+const MovieDiv = Styled(motion.div)`
   padding-bottom: 10rem;
 
   .line {

@@ -1,6 +1,7 @@
 import Styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const AboutDiv = Styled.div`
+export const AboutDiv = Styled(motion.div)`
   min-height: 80vh;
   display: flex;
   align-items: center;
