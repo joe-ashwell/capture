@@ -24,22 +24,22 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         {/* Need to add the location as a prop and pass it in to switch so that Framer motion knows when the page has changed by looking at the key */}
         <Switch location={location} key={location.pathname}>
-          <Route path="/" exact>
+          <Route path="/capture" exact>
             <AboutUs />
           </Route>
 
-          <Route path="/work" exact>
+          <Route path="/capture/work" exact>
             <OurWork />
           </Route>
 
           {/* The :id basically means anything after the the /work/ will take you to the movide detail page 
             It has to be ':id' i tried random characters and it didn't work.
         */}
-          <Route path="/work/:id">
+          <Route path="/capture/work/:id">
             <MovieDetail />
           </Route>
 
-          <Route path="/contact">
+          <Route path="/capture/contact">
             <ContactUs />
           </Route>
         </Switch>
